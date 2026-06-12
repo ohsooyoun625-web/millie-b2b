@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 
 const stats = [
   { num: "24만", label: "보유 도서 수" },
@@ -160,9 +161,10 @@ export default function Hero() {
               <span style={{ width:10, height:10, borderRadius:"50%", background:"#28CA42", display:"inline-block" }} />
               <span style={{ fontSize:"0.7rem", color:"rgba(255,255,255,0.5)", marginLeft:"0.5rem" }}>관리자 페이지</span>
             </div>
-            <img src="/images/app/app-bizlibrary.png" alt="관리자 페이지"
-              style={{ width:"100%", display:"block" }}
-              onError={e => { (e.currentTarget.parentElement as HTMLElement).style.display="none"; }}
+            <Image src="/images/app/app-bizlibrary.png" alt="관리자 페이지"
+              width={600} height={400}
+              style={{ width:"100%", height:"auto", display:"block" }}
+              unoptimized
             />
           </div>
 
@@ -187,9 +189,10 @@ export default function Hero() {
             }}>
               <span style={{ fontSize:"0.7rem", color:"rgba(0,0,0,0.6)", fontWeight:700 }}>밀리의서재 앱</span>
             </div>
-            <img src="/images/app/app-home.png" alt="밀리의서재 앱"
-              style={{ width:"100%", display:"block" }}
-              onError={e => { (e.currentTarget.parentElement as HTMLElement).style.display="none"; }}
+            <Image src="/images/app/app-home.png" alt="밀리의서재 앱"
+              width={400} height={500}
+              style={{ width:"100%", height:"auto", display:"block" }}
+              unoptimized
             />
           </div>
         </div>
