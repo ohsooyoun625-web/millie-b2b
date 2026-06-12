@@ -1,4 +1,6 @@
 "use client";
+import Image from "next/image";
+
 const logos = [
   { src: "/images/logos/hyundai-mobis.png", name: "현대모비스" },
   { src: "/images/logos/celltrion.png",     name: "셀트리온" },
@@ -21,19 +23,15 @@ const logos = [
 function LogoItem({ logo }: { logo: { src: string; name: string } }) {
   return (
     <div style={{ flexShrink: 0, height: 36, display: "flex", alignItems: "center" }}>
-      <img
+      <Image
         src={logo.src}
         alt={logo.name}
+        width={120}
+        height={28}
+        unoptimized
         style={{ height: 28, width: "auto", maxWidth: 120, objectFit: "contain", filter: "grayscale(100%) opacity(0.5)", transition: "filter 0.3s" }}
         onMouseEnter={e => (e.currentTarget.style.filter = "grayscale(0%) opacity(1)")}
         onMouseLeave={e => (e.currentTarget.style.filter = "grayscale(100%) opacity(0.5)")}
-        onError={e => {
-          const el = e.currentTarget;
-          const span = document.createElement("span");
-          span.textContent = logo.name;
-          span.style.cssText = "font-size:0.75rem;font-weight:700;color:#BBBBBB;white-space:nowrap;padding:0 0.5rem";
-          el.parentElement?.replaceChild(span, el);
-        }}
       />
     </div>
   );
@@ -62,7 +60,6 @@ export default function LogoTicker() {
       </div>
 
       <div style={{ position: "relative", overflow: "hidden" }}>
-        {/* 좌우 페이드 */}
         <div style={{ position:"absolute", left:0, top:0, bottom:0, width:80, background:"linear-gradient(to right, #F7F7F7, transparent)", zIndex:10, pointerEvents:"none" }} />
         <div style={{ position:"absolute", right:0, top:0, bottom:0, width:80, background:"linear-gradient(to left, #F7F7F7, transparent)", zIndex:10, pointerEvents:"none" }} />
 
