@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5 | Select-Object StatusCode, @{N='Size';E={$_.Content.Length}})",
+      "PowerShell(netstat -ano | findstr \":3000 \"; \\(Invoke-WebRequest -Uri \"http://localhost:3000\" -UseBasicParsing -TimeoutSec 5\\).StatusCode)",
+      "PowerShell(Start-Process powershell -ArgumentList \"-NoExit\", \"-Command\", \"npx localtunnel --port 3000 --subdomain millie-b2b-preview\" -PassThru | Select-Object Id)",
+      "Bash(ls \"C:\\\\Users\\\\User\\\\WORKSPACE\\\\millie-b2b\\\\versions\\\\*\")",
+      "Read(//c/Users/User/WORKSPACE/millie-b2b/**)"
+    ]
+  }
+}
