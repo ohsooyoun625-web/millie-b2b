@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 
 const tabs = [
   {
@@ -140,14 +141,9 @@ export default function Benefits() {
 
           {/* 이미지 */}
           <div style={{ borderRadius:24, overflow:"hidden", border:"1px solid rgba(0,0,0,0.08)", boxShadow:"0 16px 48px rgba(0,0,0,0.1)", background:"#F7F7F7", display:"flex", alignItems:"center", justifyContent:"center", minHeight:400 }}>
-            <img src={tab.img} alt={tab.imgAlt} style={{ width:"100%", display:"block", transition:"opacity 0.3s" }}
-              onError={e => {
-                e.currentTarget.style.display="none";
-                const div = document.createElement("div");
-                div.style.cssText="height:400px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:1rem";
-                div.innerHTML=`<div style="font-size:3rem">📱</div><div style="color:#888">${tab.imgAlt}</div>`;
-                e.currentTarget.parentElement?.appendChild(div);
-              }}
+            <Image src={tab.img} alt={tab.imgAlt} width={600} height={500}
+              style={{ width:"100%", height:"auto", display:"block", transition:"opacity 0.3s" }}
+              unoptimized
             />
           </div>
         </div>

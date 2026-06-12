@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
+import Image from "next/image";
 
 const cases = [
   {
@@ -129,9 +130,9 @@ export default function CasesCarousel() {
                 }}>
                   {/* 이미지 */}
                   <div style={{ position:"relative", overflow:"hidden", background:"#F0F0F0" }}>
-                    <img src={c.image} alt={c.company}
+                    <Image src={c.image} alt={c.company} width={600} height={480}
                       style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center", opacity:0.9, transition:"transform 0.8s ease", transform: i === current ? "scale(1.03)" : "scale(1)" }}
-                      onError={e => { e.currentTarget.style.display = "none"; }}
+                      unoptimized
                     />
                     <div style={{ position:"absolute", inset:0, background:"linear-gradient(to right, transparent 50%, rgba(255,255,255,0.95) 100%)" }} />
                   </div>
