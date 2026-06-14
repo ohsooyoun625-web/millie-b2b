@@ -1,6 +1,5 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
-import Image from "next/image";
 import { BASE_PATH } from "../lib/basePath";
 
 const tabs = [
@@ -142,9 +141,9 @@ export default function Benefits() {
 
           {/* 이미지 */}
           <div style={{ borderRadius:24, overflow:"hidden", border:"1px solid rgba(0,0,0,0.08)", boxShadow:"0 16px 48px rgba(0,0,0,0.1)", background:"#F7F7F7", display:"flex", alignItems:"center", justifyContent:"center", minHeight:400 }}>
-            <Image src={`${BASE_PATH}${tab.img}`} alt={tab.imgAlt} width={600} height={500}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={`${BASE_PATH}${tab.img}`} alt={tab.imgAlt}
               style={{ width:"100%", height:"auto", display:"block", transition:"opacity 0.3s" }}
-              unoptimized
             />
           </div>
         </div>

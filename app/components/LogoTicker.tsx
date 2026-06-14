@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { BASE_PATH } from "../lib/basePath";
 
 const logos = [
@@ -24,12 +23,10 @@ const logos = [
 function LogoItem({ logo }: { logo: { src: string; name: string } }) {
   return (
     <div style={{ flexShrink: 0, height: 36, display: "flex", alignItems: "center" }}>
-      <Image
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
         src={`${BASE_PATH}${logo.src}`}
         alt={logo.name}
-        width={120}
-        height={28}
-        unoptimized
         style={{ height: 28, width: "auto", maxWidth: 120, objectFit: "contain", filter: "grayscale(100%) opacity(0.5)", transition: "filter 0.3s" }}
         onMouseEnter={e => (e.currentTarget.style.filter = "grayscale(0%) opacity(1)")}
         onMouseLeave={e => (e.currentTarget.style.filter = "grayscale(100%) opacity(0.5)")}
