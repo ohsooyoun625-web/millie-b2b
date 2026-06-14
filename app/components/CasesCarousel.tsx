@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useRef, useState, useCallback } from "react";
 import Image from "next/image";
+import { BASE_PATH } from "../lib/basePath";
 
 const cases = [
   {
@@ -130,7 +131,7 @@ export default function CasesCarousel() {
                 }}>
                   {/* 이미지 */}
                   <div style={{ position:"relative", overflow:"hidden", background:"#F0F0F0" }}>
-                    <Image src={c.image} alt={c.company} width={600} height={480}
+                    <Image src={`${BASE_PATH}${c.image}`} alt={c.company} width={600} height={480}
                       style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center", opacity:0.9, transition:"transform 0.8s ease", transform: i === current ? "scale(1.03)" : "scale(1)" }}
                       unoptimized
                     />

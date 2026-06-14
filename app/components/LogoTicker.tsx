@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import { BASE_PATH } from "../lib/basePath";
 
 const logos = [
   { src: "/images/logos/hyundai-mobis.png", name: "현대모비스" },
@@ -24,7 +25,7 @@ function LogoItem({ logo }: { logo: { src: string; name: string } }) {
   return (
     <div style={{ flexShrink: 0, height: 36, display: "flex", alignItems: "center" }}>
       <Image
-        src={logo.src}
+        src={`${BASE_PATH}${logo.src}`}
         alt={logo.name}
         width={120}
         height={28}
