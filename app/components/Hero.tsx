@@ -54,19 +54,8 @@ export default function Hero() {
       }}>
         {/* 왼쪽: 텍스트 */}
         <div>
-          {/* 배지 */}
-          <div className="reveal stagger-1 hero-badge" style={{
-            display: "inline-flex", alignItems: "center", gap: "0.5rem",
-            padding: "0.4rem 0.9rem", borderRadius: 50,
-            background: "#FFE400", color: "#111111",
-            fontSize: "0.8rem", fontWeight: 700, letterSpacing: "0.06em",
-            marginBottom: "1.75rem", boxShadow: "0 2px 12px rgba(255,228,0,0.4)",
-          }}>
-            🏆 기업 독서 경영 플랫폼 No.1
-          </div>
-
           {/* 메인 헤드라인 */}
-          <h1 className="reveal stagger-2" style={{
+          <h1 className="reveal stagger-1" style={{
             fontSize: "clamp(2rem, 3.5vw, 3.4rem)",
             fontWeight: 900,
             lineHeight: 1.25,
@@ -74,14 +63,15 @@ export default function Hero() {
             marginBottom: "1.25rem",
             color: "#111111",
           }}>
-            <span style={{ display: "block" }}>독서는 개인의 성장을 넘어</span>
+            <span style={{ display: "block" }}>독서가 일상에 스며들수록,</span>
             <span style={{ display: "block" }}>
-              <span style={{ background: "#FFE400", color: "#111111", padding: "2px 8px", borderRadius: 6 }}>조직의 에너지</span>가 됩니다
+              <span style={{ background: "#FFE400", color: "#111111", padding: "2px 8px", borderRadius: 6 }}>구성원의 역량</span>과 학습문화는
             </span>
+            <span style={{ display: "block" }}>함께 성장합니다</span>
           </h1>
 
           {/* 서브 메시지 */}
-          <p className="reveal stagger-2" style={{
+          <p className="reveal stagger-2 " style={{
             fontSize: "1rem",
             fontWeight: 600,
             color: "#444444",
