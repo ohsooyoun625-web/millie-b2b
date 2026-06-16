@@ -16,6 +16,18 @@ const reasons = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-9 3h2v2h-2v-2zm0 4h2v2h-2v-2zM8 10h2v2H8v-2zm0 4h2v2H8v-2zm-2 2H4v-2h2v2zm0-4H4v-2h2v2zm12 4h-2v-2h2v2zm0-4h-2v-2h2v2z" fill="#111111"/>
+        <path d="M20 3H4c-1.1 0-2 .9-2 2v2h20V5c0-1.1-.9-2-2-2z" fill="#111111" opacity="0.4"/>
+      </svg>
+    ),
+    tag: "문화",
+    title: "학습하는 조직 문화",
+    desc: "같은 책을 읽고 토론하는 문화는 부서 간 소통을 강화하고 조직의 집단 지성을 끌어올립니다. '독서경영 우수직장' 인증을 통한 기업 이미지 제고 효과도 기대할 수 있습니다.",
+    highlight: "독서경영 우수직장 인증 지원",
+  },
+  {
+    icon: (
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
         <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="#111111"/>
       </svg>
     ),
@@ -27,14 +39,13 @@ const reasons = [
   {
     icon: (
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-        <path d="M20 7H4c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V9c0-1.1-.9-2-2-2zm-9 3h2v2h-2v-2zm0 4h2v2h-2v-2zM8 10h2v2H8v-2zm0 4h2v2H8v-2zm-2 2H4v-2h2v2zm0-4H4v-2h2v2zm12 4h-2v-2h2v2zm0-4h-2v-2h2v2z" fill="#111111"/>
-        <path d="M20 3H4c-1.1 0-2 .9-2 2v2h20V5c0-1.1-.9-2-2-2z" fill="#111111" opacity="0.4"/>
+        <path d="M20 12v8H4v-8M2 7h20v5H2zM12 22V7M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7zM12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z" stroke="#111111" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
       </svg>
     ),
-    tag: "경영",
-    title: "학습하는 조직 문화",
-    desc: "같은 책을 읽고 토론하는 문화는 부서 간 소통을 강화하고 조직의 집단 지성을 끌어올립니다. '독서경영 우수직장' 인증을 통한 기업 이미지 제고 효과도 기대할 수 있습니다.",
-    highlight: "독서경영 우수직장 인증 지원",
+    tag: "제휴",
+    title: "기업 이벤트 & 기프트",
+    desc: "기업 대내외 행사 또는 임직원 대상 성과 우수자 포상 및 승진자 선물로 밀리의서재 기프트카드를 활용해보세요. 특별한 날을 더욱 의미있게 만들어줍니다.",
+    highlight: "사업 제휴 문의로 맞춤 혜택 확인",
   },
 ];
 
@@ -68,10 +79,10 @@ export default function WhyReading() {
             <span style={{ display:"block", width:24, height:2, background:"#FFE400" }} />
           </span>
           <h2 style={{ fontSize:"clamp(1.8rem,3.5vw,2.8rem)", fontWeight:800, lineHeight:1.25, letterSpacing:"-0.03em", marginBottom:"1.25rem", color:"#111111" }}>
-            기업이 독서 경영에 투자해야 하는<br/>3가지 이유
+            기업의 독서 활용 목적에 따라<br/>다양하게 이용해보세요
           </h2>
           <p style={{ fontSize:"1.1rem", color:"#666666", lineHeight:1.8 }}>
-            단순한 복지를 넘어, 독서는 개인과 조직 모두를 바꾸는 가장 강력한 경영 도구입니다.
+            독서는 단순한 복지를 넘어, 개인과 조직 모두를 바꾸는 가장 강력한 경영도구입니다.
           </p>
         </div>
 
@@ -127,8 +138,9 @@ export default function WhyReading() {
       </div>
 
       <style>{`
-        .why-cards-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
-        @media (max-width: 900px) { .why-cards-grid { grid-template-columns: 1fr; } }
+        .why-cards-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1.5rem; }
+        @media (max-width: 1100px) { .why-cards-grid { grid-template-columns: repeat(2,1fr); } }
+        @media (max-width: 600px) { .why-cards-grid { grid-template-columns: 1fr; } }
       `}</style>
     </section>
   );

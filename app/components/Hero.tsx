@@ -71,22 +71,6 @@ export default function Hero() {
           </h1>
 
           {/* 서브 메시지 */}
-          <p className="reveal stagger-2 " style={{
-            fontSize: "1rem",
-            fontWeight: 600,
-            color: "#444444",
-            marginBottom: "1.25rem",
-            letterSpacing: "-0.01em",
-          }}>
-            임직원이 가장 오래 쓰는 복지 &nbsp;·&nbsp; 250여 개 기업의 선택
-          </p>
-
-          {/* 서브 카피 */}
-          <p className="reveal stagger-3" style={{ marginBottom: "2.5rem", lineHeight: 1.9, color: "#666666", fontSize: "clamp(0.85rem, 1.2vw, 0.97rem)" }}>
-            대기업부터 공공기관까지, <strong style={{ color: "#111111" }}>250여 개 기업</strong>이 밀리의서재 B2B를 선택했습니다.<br />
-            국내 최대 24만 권의 콘텐츠로 임직원의 역량 강화와 독서 문화를 함께 만들어가세요.
-          </p>
-
           {/* CTA 버튼 */}
           <div className="reveal stagger-4 hero-cta-row" style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
             <a href="https://share-na2.hsforms.com/1vS4WVefOT6iAAcgxJFqkvQsqxds" target="_blank"

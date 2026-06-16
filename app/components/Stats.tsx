@@ -62,44 +62,13 @@ export default function Stats() {
           ))}
         </div>
 
-        {/* 경쟁사 비교 */}
-        <div style={{ marginTop:"4rem", background:"rgba(255,255,255,0.03)", border:"1px solid rgba(255,255,255,0.08)", borderRadius:20, padding:"2rem 2.5rem" }}>
-          <div style={{ textAlign:"center", marginBottom:"1.5rem" }}>
-            <span style={{ fontSize:"0.8rem", color:"#FFE400", fontWeight:700, letterSpacing:"0.08em" }}>경쟁사 대비 압도적 우위</span>
-          </div>
-          <div className="compare-grid">
-            <div style={{ fontSize:"0.85rem", color:"#6B6B6B", fontWeight:600 }}>비교 항목</div>
-            <div style={{ textAlign:"center", fontWeight:800, color:"#FFE400", fontSize:"0.95rem" }}>밀리의서재</div>
-            <div style={{ textAlign:"center", fontSize:"0.85rem", color:"#6B6B6B" }}>경쟁사 A</div>
-            <div style={{ textAlign:"center", fontSize:"0.85rem", color:"#6B6B6B" }}>경쟁사 B</div>
-
-            {[
-              { label:"보유 권수", vals:["24만 권","12만 권","2만 권"] },
-              { label:"베스트셀러 보유율", vals:["74%","21%","14%"] },
-              { label:"신간 보유율", vals:["36%","21%","0.3%"] },
-              { label:"수료 미션 기능", vals:["O","X","X"] },
-              { label:"오디오북·챗북", vals:["O","O","X"] },
-            ].map((row, i) => (
-              <div key={`row${i}`} style={{ display:"contents" }}>
-                <div style={{ fontSize:"0.85rem", color:"#B0B0B0", paddingTop:i>0?"0.75rem":0 }}>{row.label}</div>
-                {row.vals.map((v, j) => (
-                  <div key={`v${i}${j}`} style={{ textAlign:"center", fontWeight: j===0?800:400, color: j===0?"#FFE400":"#6B6B6B", fontSize: j===0?"0.95rem":"0.85rem", paddingTop:i>0?"0.75rem":0 }}>
-                    {v}
-                  </div>
-                ))}
-              </div>
-            ))}
-          </div>
-        </div>
       </div>
 
       <style>{`
         .stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.08); border-radius: 20px; overflow: hidden; }
         .stats-grid > div { background: #0D0D0D; }
-        .compare-grid { display: grid; grid-template-columns: 2fr 1.5fr 1fr 1fr; gap: 0.5rem; align-items: center; }
         @media (max-width: 768px) {
           .stats-grid { grid-template-columns: repeat(2,1fr); }
-          .compare-grid { display: none; }
         }
       `}</style>
     </section>

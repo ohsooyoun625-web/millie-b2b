@@ -28,7 +28,7 @@ export default function FinalCTA() {
         </span>
 
         <h2 className="reveal" style={{ fontSize:"clamp(2rem,4vw,3.2rem)", fontWeight:900, lineHeight:1.2, letterSpacing:"-0.03em", marginBottom:"1.25rem", color:"#111111" }}>
-          임직원의 성장이<br/><span style={{ background:"#FFE400", padding:"2px 10px", borderRadius:8 }}>조직의 경쟁력</span>이 됩니다
+          독서는 개인의 성장을 넘어,<br/><span style={{ background:"#FFE400", padding:"2px 10px", borderRadius:8 }}>조직의 에너지</span>가 됩니다
         </h2>
 
         <p className="reveal" style={{ fontSize:"1.1rem", color:"#666666", lineHeight:1.8, marginBottom:"3rem", maxWidth:600, marginLeft:"auto", marginRight:"auto" }}>
